@@ -2,7 +2,7 @@ import cv2
 
 
 def main():
-    capture = cv2.VideoCapture(0)
+    capture = cv2.VideoCapture(1, cv2.CAP_DSHOW)
 
     while(True):
         ret, frame = capture.read()
