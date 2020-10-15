@@ -1,8 +1,11 @@
 import cv2
+import json
+
+config = json.load(open('setting.json', 'r'))
 
 
 def main():
-    capture = cv2.VideoCapture(1, cv2.CAP_DSHOW)
+    capture = cv2.VideoCapture(config['DEVICE_ID'], cv2.CAP_DSHOW)
 
     while(True):
         ret, frame = capture.read()
