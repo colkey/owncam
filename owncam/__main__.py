@@ -7,7 +7,7 @@ config = json.load(open('setting.json', 'r'))
 def main():
     capture = cv2.VideoCapture(config['DEVICE_ID'], cv2.CAP_DSHOW)
 
-    while(True):
+    while(capture.isOpened()):
         ret, frame = capture.read()
         cv2.imshow('ownCam', frame)
         if cv2.waitKey(30) & 0xFF == ord('q'):
