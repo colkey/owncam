@@ -23,6 +23,9 @@ def processor(ret, frame):
     if not ret:
         return ret, frame
 
+    FLIP_LR = 1
+    frame = cv2.flip(frame, FLIP_LR)
+
     return ret, frame
 
 
